@@ -4,24 +4,44 @@
   <meta charset="UTF-8">
   <title>Nahor Tutoring Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Fonts for fun & professional look -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <span class="business-phone">
-        <span class="phone-emoji">📞</span> <a href="tel:+19804289157">+1 980-428-9157</a>
-        <span class="business-label">(Business Number)</span>
-      </span>
+  <!-- Mobile-First Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#carousel-section" class="navbar-brand">
+        <span class="brand-n">N</span>ahor <span class="brand-tutoring">Tutoring</span>
+      </a>
+      <button class="navbar-toggle" id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     </div>
+    <div class="navbar-links" id="navbar-links">
+      <a href="#about">About</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#rates">Rates</a>
+      <a href="#availability">Availability</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
     <div class="header-main">
-      <h1>
-        <span class="bounce">N</span><span class="bounce" style="animation-delay:0.05s">a</span><span class="bounce" style="animation-delay:0.1s">h</span><span class="bounce" style="animation-delay:0.15s">o</span><span class="bounce" style="animation-delay:0.2s">r</span>
-        <span style="color:#19c2a5;">Tutoring</span> <span class="services">Services</span>
-      </h1>
-      <p class="subtitle">Professional, Fun, and Kid-Friendly Tutoring for Grades 4–7</p>
+      <div class="hero">
+        <h1>
+          <span class="brand-n">N</span>ahor 
+          <span class="brand-tutoring">Tutoring</span>
+        </h1>
+        <p class="subtitle">Professional, Fun, and Kid-Friendly Tutoring for Grades 4–7</p>
+        <a href="#contact" class="cta-btn">Book a Free Session</a>
+        <div class="hero-contact">
+          <span class="phone-emoji">📞</span> 
+          <a href="tel:+19804289157" class="hero-phone">+1 980-428-9157</a>
+          <span class="business-label">(Business Number)</span>
+        </div>
+      </div>
     </div>
     <div class="header-wave"></div>
   </header>
@@ -29,134 +49,147 @@
   <section id="carousel-section">
     <div class="carousel" id="carousel">
       <div class="carousel-item active">
-        <!-- 
-          HIDDEN NOTE FOR NAHOR: How to add your own photo to the first carousel slide:
-          1. Place your photo in the same folder as this index.html file. For example, name it "nahor.jpg".
-          2. Replace the line <img src="blank.jpg" ...> below with <img src="nahor.jpg" alt="Nahor Mobae" class="carousel-img">
-          3. Reload the page in your browser to see your photo!
-        -->
-        <img src="blank.jpg" alt="Nahor - your photo here" class="carousel-img">
-        <div class="carousel-caption">[Add your photo above!]</div>
+        <img src="https://wngylwaerk.ufs.sh/f/CiyGpOlvnT5bkkX8ZcCiYzBeQKHfLh3A4aXsZmCSxquvlogw" alt="Nahor Mobae smiling" class="carousel-img">
+        <div class="carousel-caption">Meet Nahor Mobae</div>
       </div>
       <div class="carousel-item">
         <img src="https://wngylwaerk.ufs.sh/f/CiyGpOlvnT5bOMQcduGcTefkChxZDv4jrlyRWE5YK8FN3Lm6" alt="Students raising their hands in a classroom" class="carousel-img">
         <div class="carousel-caption">Professional Tutoring in Action</div>
       </div>
+      <div class="carousel-indicators" id="carousel-indicators"></div>
+      <button class="carousel-control prev" aria-label="Previous" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="carousel-control next" aria-label="Next" onclick="moveSlide(1)">&#8594;</button>
     </div>
-    <button class="carousel-control prev" aria-label="Previous" onclick="moveSlide(-1)">&#8592;</button>
-    <button class="carousel-control next" aria-label="Next" onclick="moveSlide(1)">&#8594;</button>
-    <div class="carousel-indicators" id="carousel-indicators"></div>
   </section>
 
   <main>
-    <section class="about floating-card">
-      <h2><span class="emoji">👋</span> About Me</h2>
-      <p>
-        Hi! I'm <strong>Nahor Mobae</strong>, currently a student at UNC Charlotte. I previously went to Davidson College and graduated from East Mecklenburg High School's IB program. I am passionate about helping kids excel in school and build confidence in their learning.
-      </p>
-    </section>
-
-    <section class="subjects floating-card">
-      <h2><span class="emoji">📚</span> Subjects Offered</h2>
-      <ul>
-        <li><span class="subject-bubble math">Math</span></li>
-        <li><span class="subject-bubble english">English</span></li>
-        <li><span class="subject-bubble history">History</span></li>
-        <li><span class="subject-bubble science">Science</span></li>
-        <li><span class="subject-bubble spanish">Basic Elementary School Spanish</span></li>
-      </ul>
-    </section>
-
-    <section class="rates floating-card">
-      <h2><span class="emoji">💸</span> Rates & Discounts</h2>
-      <div class="price-table-wrapper">
-        <table class="price-table">
-          <tr>
-            <th>Service</th>
-            <th>Price Per Student</th>
-          </tr>
-          <tr>
-            <td>First session & consultation</td>
-            <td class="free">FREE!</td>
-          </tr>
-          <tr>
-            <td>Standard rate</td>
-            <td>$22/hr</td>
-          </tr>
-          <tr>
-            <td>Sibling discount (together)</td>
-            <td>$17/hr each</td>
-          </tr>
-          <tr>
-            <td>Sibling discount (separate sessions)</td>
-            <td>$20/hr each</td>
-          </tr>
-          <tr>
-            <td>Group of 2 (same grade/level)</td>
-            <td>$17.50/hr each</td>
-          </tr>
-          <tr>
-            <td>Group of 3</td>
-            <td>$15/hr each</td>
-          </tr>
-          <tr>
-            <td>Group of 4</td>
-            <td>$13/hr each</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="availability floating-card">
-      <h2><span class="emoji">⏰</span> Availability</h2>
-      <div class="availability-table-wrapper">
-        <table class="availability-table">
-          <tr>
-            <th>Day</th>
-            <th>Hours Available</th>
-          </tr>
-          <tr>
-            <td>Monday–Thursday</td>
-            <td>9:00 AM – 1:00 PM</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td>9:00 AM – 5:00 PM</td>
-          </tr>
-          <tr>
-            <td>Weekends</td>
-            <td class="not-available">Not available <span class="note">(may change in the future)</span></td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="approach floating-card">
-      <h2><span class="emoji">🌟</span> My Approach</h2>
-      <ul>
-        <li>Progress tracked for every student <span class="progress-bar-outer"><span class="progress-bar-inner"></span></span></li>
-        <li>After every session, I update parents on progress <span class="emoji">📈</span></li>
-        <li>We use your preferred workbook <span class="emoji">📒</span></li>
-        <li>Fun, supportive, and engaging learning environment <span class="emoji">🎲</span></li>
-      </ul>
-    </section>
-
-    <section class="contact floating-card">
-      <h2><span class="emoji">📞</span> Contact & Booking</h2>
-      <div class="contact-block">
+    <section class="card-section" id="about">
+      <div class="card">
+        <h2><span class="emoji">👋</span> About Me</h2>
         <p>
-          <strong>Business Number:</strong>
-          <a href="tel:+19804289157" class="contact-phone">+1 980-428-9157</a>
-          <span class="small">(call or text for quick response)</span>
+          Hi! I'm <strong>Nahor Mobae</strong>, a student at UNC Charlotte, former Davidson College attendee, and East Mecklenburg High School IB graduate. I am passionate about helping kids excel in school and build confidence in their learning.
         </p>
       </div>
-      <div id="confetti" class="confetti"></div>
-      <button class="btn-book" onclick="celebrateConfetti()">Book a Free Session!</button>
+    </section>
+
+    <section class="card-section" id="subjects">
+      <div class="card">
+        <h2><span class="emoji">📚</span> Subjects Offered</h2>
+        <ul class="subjects-list">
+          <li><span class="subject-badge math">Math</span></li>
+          <li><span class="subject-badge english">English</span></li>
+          <li><span class="subject-badge history">History</span></li>
+          <li><span class="subject-badge science">Science</span></li>
+          <li><span class="subject-badge spanish">Basic Elementary School Spanish</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-section" id="rates">
+      <div class="card">
+        <h2><span class="emoji">💸</span> Rates & Discounts</h2>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Price Per Student</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First session & consultation</td>
+              <td class="free">FREE!</td>
+            </tr>
+            <tr>
+              <td>Standard rate</td>
+              <td>$22/hr</td>
+            </tr>
+            <tr>
+              <td>Sibling discount (together)</td>
+              <td>$17/hr each</td>
+            </tr>
+            <tr>
+              <td>Sibling discount (separate sessions)</td>
+              <td>$20/hr each</td>
+            </tr>
+            <tr>
+              <td>Group of 2 (same grade/level)</td>
+              <td>$17.50/hr each</td>
+            </tr>
+            <tr>
+              <td>Group of 3</td>
+              <td>$15/hr each</td>
+            </tr>
+            <tr>
+              <td>Group of 4</td>
+              <td>$13/hr each</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card-section" id="availability">
+      <div class="card">
+        <h2><span class="emoji">⏰</span> Availability</h2>
+        <table class="availability-table">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Hours Available</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday–Thursday</td>
+              <td>9:00 AM – 1:00 PM</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>9:00 AM – 5:00 PM</td>
+            </tr>
+            <tr>
+              <td>Weekends</td>
+              <td class="not-available">Not available <span class="note">(may change in the future)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card-section" id="approach">
+      <div class="card">
+        <h2><span class="emoji">🌟</span> My Approach</h2>
+        <ul class="approach-list">
+          <li>Progress tracked for every student <span class="progress-bar-outer"><span class="progress-bar-inner"></span></span></li>
+          <li>After every session, I update parents on progress <span class="emoji">📈</span></li>
+          <li>We use your preferred workbook <span class="emoji">📒</span></li>
+          <li>Fun, supportive, and engaging learning environment <span class="emoji">🎲</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-section" id="contact">
+      <div class="card">
+        <h2><span class="emoji">📞</span> Contact & Booking</h2>
+        <div class="contact-block">
+          <p>
+            <strong>Business Number:</strong>
+            <a href="tel:+19804289157" class="contact-phone">+1 980-428-9157</a>
+            <span class="small">(call or text for quick response)</span>
+          </p>
+        </div>
+        <div id="confetti" class="confetti"></div>
+        <button class="btn-book" onclick="celebrateConfetti()">Book a Free Session!</button>
+      </div>
     </section>
   </main>
 
   <footer>
-    &copy; <span id="year"></span> Nahor Tutoring Services. All rights reserved.
+    <div class="footer-content">
+      &copy; <span id="year"></span> Nahor Tutoring Services. All rights reserved.
+      <a href="#" class="back-to-top" id="backToTop" title="Back to Top">&#8679;</a>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>
